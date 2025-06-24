@@ -1,18 +1,4 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  experimental: {
-    serverActions: true,
-    optimizePackageImports: ['react-icons']
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  output: 'export' // ✅ ini yang benar untuk next export
+module.exports = {
+  output: 'export', // Untuk static export (akan menghasilkan folder 'out')
+  distDir: process.env.NODE_ENV === 'production' ? '.next' : 'out'
 }
-
-module.exports = nextConfig
