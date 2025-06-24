@@ -1,0 +1,413 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 1rem 0 2rem;
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: border-color 0.15s ease;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.modeToggle {
+  display: flex;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+}
+
+.toggleButton {
+  flex: 1;
+  padding: 0.5rem;
+  background: #f5f5f5;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggleButton.active {
+  background: #0070f3;
+  color: white;
+}
+
+
+.passwordInput {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.errorInput {
+  border-color: #ff4444 !important;
+}
+
+.errorText {
+  color: #ff4444;
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.smallButton {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.smallButton:hover {
+  background: #005bb5;
+}
+
+.controls {
+  margin-top: 1.5rem;
+}
+
+.rangeLabel {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.rangeInput {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.checkboxInput {
+  margin-right: 0.5rem;
+}
+
+.primaryButton {
+  width: 100%;
+  padding: 0.75rem;
+  background: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.primaryButton:hover {
+  background: #005bb5;
+}
+
+.primaryButton:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.inputLabel {
+  display: flex;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+  width: 100%;
+  /* Pastikan form group mengambil lebar penuh */
+}
+
+/* Style untuk semua input text dan password */
+.textInput,
+.passwordInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  /* Pastikan padding tidak mempengaruhi lebar */
+}
+
+/* Style khusus untuk container password */
+.passwordPreview {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.vaultSection {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.sectionTitle {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.vaultInfo {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.passwordList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.passwordItem {
+  padding: 1rem;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+}
+
+.passwordDetails {
+  flex: 1;
+}
+
+.accountName {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.accountDescription {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.passwordMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.passwordHidden {
+  font-family: monospace;
+  letter-spacing: 2px;
+}
+
+.passwordDate {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.passwordActions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1rem;
+}
+
+.smallButtonDanger {
+  padding: 0.5rem 1rem;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.smallButtonDanger:hover {
+  background: #cc0000;
+}
+
+
+.emptyState {
+  text-align: center;
+  padding: 2rem;
+  border: 1px dashed #ddd;
+  border-radius: 8px;
+}
+
+.emptyText {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.emptySubtext {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerText {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .options {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animasi untuk tombol generate */
+.primaryButton {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.primaryButton.generating {
+  background-color: #005bb5;
+  cursor: not-allowed;
+}
+
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Efek klik */
+.primaryButton:active:not(.generating) {
+  transform: scale(0.95);
+}
+
+/* Add these new styles */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+.notification.success {
+  background-color: #4CAF50;
+}
+
+.notification.error {
+  background-color: #F44336;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Spinner animation */
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.primaryButton.generating {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Rest of your existing styles remain the same */
